@@ -18,7 +18,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/zone_image" />
 
     <ImageView
         android:id="@+id/blackGradient"
@@ -31,7 +32,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/black_gradient" />
+        app:srcCompat="@drawable/black_gradient"
+        android:contentDescription="@string/gradient_color" />
 
     <TextView
         android:id="@+id/text1"
@@ -41,7 +43,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="LOBBY"
+        android:text="@string/zone_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textSize="42sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,8 +68,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/whitelogo" />
-
-    />
-
+        app:srcCompat="@drawable/whitelogo"
+        android:contentDescription="@string/hotel_logo_white" />
 </android.support.constraint.ConstraintLayout>

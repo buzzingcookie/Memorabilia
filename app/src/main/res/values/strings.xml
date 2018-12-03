@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LastHope</string>
+    <string name="zone_name">LOBBY</string>
+    <string name="zone_image">TODO</string>
+    <string name="gradient_color">TODO</string>
+    <string name="hotel_logo_white">TODO</string>
 </resources>
