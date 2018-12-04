@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity2" />
-        <activity android:name=".LobbyView"></activity>
+        <activity android:name=".LobbyView" />
+        <activity android:name=".ConferenceHallView"></activity>
     </application>
 
 </manifest>

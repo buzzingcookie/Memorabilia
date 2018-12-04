@@ -15,13 +15,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 public class Activity2 extends AppCompatActivity {
 
-    String Titles[] = {"LOBBY", "CONFERENCE HALL", "NIRVANA"};
+    String Titles[] = {"LOBBY", "CONFERENCE HALL", "OASIS", "NIRVANA", "3rd HALF", "KING'S HALL", "ROCK ROYALTY"};
 
-    int rowImages[] = {R.drawable.lobby, R.drawable.conferencehall, R.drawable.nirvanatower};
-    int blackGradients[] = {R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient};
+    int rowImages[] = {R.drawable.lobby, R.drawable.conferencehall, R.drawable.nirvanatower, R.drawable.nirvanatower2sunset, R.drawable.thirdhalf, R.drawable.kingshall, R.drawable.rockroyalty};
+    int blackGradients[] = {R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class Activity2 extends AppCompatActivity {
 
         MyAdapter adapter = new MyAdapter(this, Titles, rowImages, blackGradients);
         list.setAdapter(adapter);
+        list.setDivider(null);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -40,10 +42,22 @@ public class Activity2 extends AppCompatActivity {
                     LobbyView();
                 }
                 if (position == 1) {
-                    Toast.makeText(Activity2.this, "Item One Two", Toast.LENGTH_SHORT).show();
+                    ConferenceHallView();
                 }
                 if (position == 2) {
-                    Toast.makeText(Activity2.this, "Item One Three", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Item One Clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 3) {
+                    Toast.makeText(Activity2.this, "Item One Clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 4) {
+                    Toast.makeText(Activity2.this, "Item One Clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 5) {
+                    Toast.makeText(Activity2.this, "Item One Clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 6) {
+                    Toast.makeText(Activity2.this, "Item One Clicked", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -52,6 +66,13 @@ public class Activity2 extends AppCompatActivity {
     public void LobbyView(){
         Intent i = new Intent(this, LobbyView.class);
         startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    public void ConferenceHallView(){
+        Intent i = new Intent(this, ConferenceHallView.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     public class MyAdapter extends ArrayAdapter<String> {
@@ -76,9 +97,11 @@ public class Activity2 extends AppCompatActivity {
 
             LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = layoutInflater.inflate(R.layout.row, parent, false);
+
             TextView title = row.findViewById(R.id.text1);
             ImageView rowimage = row.findViewById(R.id.row_image);
             ImageView black = row.findViewById(R.id.blackGradient);
+            ImageView purpleBar = row.findViewById(R.id.purple_bar);
 
             title.setText(Titles[position]);
             rowimage.setImageResource(rowImages[position]);
