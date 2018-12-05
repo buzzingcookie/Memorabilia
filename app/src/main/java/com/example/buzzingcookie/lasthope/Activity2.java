@@ -23,6 +23,7 @@ public class Activity2 extends AppCompatActivity {
 
     int rowImages[] = {R.drawable.lobby, R.drawable.conferencehall, R.drawable.nirvanatower, R.drawable.nirvanatower2sunset, R.drawable.thirdhalf, R.drawable.kingshall, R.drawable.rockroyalty};
     int blackGradients[] = {R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient};
+    int goldLogos[] = {R.drawable.whitelogo, R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo, };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class Activity2 extends AppCompatActivity {
 
         ListView list = (ListView) findViewById(R.id.list1);
 
-        MyAdapter adapter = new MyAdapter(this, Titles, rowImages, blackGradients);
+        MyAdapter adapter = new MyAdapter(this, Titles, rowImages, blackGradients, goldLogos);
         list.setAdapter(adapter);
         list.setDivider(null);
 
@@ -81,14 +82,16 @@ public class Activity2 extends AppCompatActivity {
         String myTitles[];
         int[] myRowImages;
         int[] myBlackgradients;
+        int[] myGoldLogo;
 
-        MyAdapter(Context c, String[] Titles, int[] rowImages, int[] blackGradients) {
+        MyAdapter(Context c, String[] Titles, int[] rowImages, int[] blackGradients, int[] goldLogos) {
 
             super(c, R.layout.row, R.id.text1, Titles);
             this.context = c;
             this.myTitles = Titles;
             this.myRowImages = rowImages;
             this.myBlackgradients = blackGradients;
+            this.myGoldLogo = goldLogos;
         }
 
         @NonNull
@@ -101,11 +104,12 @@ public class Activity2 extends AppCompatActivity {
             TextView title = row.findViewById(R.id.text1);
             ImageView rowimage = row.findViewById(R.id.row_image);
             ImageView black = row.findViewById(R.id.blackGradient);
-            ImageView purpleBar = row.findViewById(R.id.purple_bar);
+            ImageView goldLogo = row.findViewById(R.id.gold_hrLogo);
 
             title.setText(Titles[position]);
             rowimage.setImageResource(rowImages[position]);
             black.setImageResource(blackGradients[position]);
+            goldLogo.setImageResource(goldLogos[position]);
 
             return row;
         }
