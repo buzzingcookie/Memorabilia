@@ -8,7 +8,11 @@
     android:orientation="vertical"
     android:divider="@null"
     android:dividerHeight="0dp"
-    tools:context=".MainActivity">
+    tools:context=".Activity2">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
     <ListView
         android:id="@+id/list1"

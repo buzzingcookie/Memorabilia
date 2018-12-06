@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     Button logoButton;
     private VideoView videoBG;
     MediaPlayer mMediaPlayer;
-
     public void videoINIT(){
 
         videoBG = (VideoView) findViewById(R.id.video_splash);
@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
