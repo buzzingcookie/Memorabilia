@@ -78,6 +78,7 @@ public class Activity2 extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
+
     public class MyAdapter extends ArrayAdapter<String> {
 
         Context context;

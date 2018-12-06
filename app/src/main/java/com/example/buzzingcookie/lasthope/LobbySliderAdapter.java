@@ -1,9 +1,11 @@
 package com.example.buzzingcookie.lasthope;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +22,7 @@ public class LobbySliderAdapter extends PagerAdapter {
     }
 
     public String[] lobby_slide_artistName = {"Alice Cooper","Metallica","ZZTop"};
-    public int[] lobby_slide_images = {R.drawable.whitelogo, R.drawable.whitelogo, R.drawable.whitelogo};
+    public int[] lobby_slide_images = {R.drawable.splashscreen_button, R.drawable.whitelogo, R.drawable.whitelogo};
 
 
     @Override
@@ -34,13 +36,24 @@ public class LobbySliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container,final int position) {
 
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+
         View view = layoutInflater.inflate(R.layout.lobby_slide_layout,container,false);
+
+        if (position == 0) {
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+        }
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.lobby_memo_image);
         TextView slideArtistName = (TextView) view.findViewById(R.id.lobby_artist_name);
+
 
         slideImageView.setImageResource(lobby_slide_images[position]);
         slideArtistName.setText(lobby_slide_artistName[position]);
@@ -55,3 +68,7 @@ public class LobbySliderAdapter extends PagerAdapter {
         container.removeView((ConstraintLayout)object);
     }
 }
+
+
+
+
