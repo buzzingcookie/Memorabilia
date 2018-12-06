@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LobbySliderAdapter extends PagerAdapter {
 
@@ -41,15 +42,14 @@ public class LobbySliderAdapter extends PagerAdapter {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
         View view = layoutInflater.inflate(R.layout.lobby_slide_layout,container,false);
-
-        if (position == 0) {
+        
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Log.i("TAG", "This page was clicked: " + position);
                 }
             });
-        }
+
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.lobby_memo_image);
         TextView slideArtistName = (TextView) view.findViewById(R.id.lobby_artist_name);
