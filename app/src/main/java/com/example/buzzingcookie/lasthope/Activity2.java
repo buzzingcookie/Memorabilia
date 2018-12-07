@@ -46,7 +46,6 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 if (position == 0) {
-
                     LobbyView();
                 }
                 if (position == 1) {

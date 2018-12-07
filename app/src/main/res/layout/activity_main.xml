@@ -43,22 +43,25 @@
         android:background="@drawable/splashscreen_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/video_splash"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/feel_the_vibe"
-        android:layout_width="433dp"
-        android:layout_height="109dp"
+        android:layout_width="505dp"
+        android:layout_height="133dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="472dp"
+        android:layout_marginTop="500dp"
         android:layout_marginEnd="8dp"
-        android:text="Feel The Vibe"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textSize="70sp"
+        android:fontFamily="serif"
+        android:text="FEEL THE VIBE"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="62sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!--

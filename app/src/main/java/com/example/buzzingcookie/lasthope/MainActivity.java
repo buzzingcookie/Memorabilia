@@ -67,11 +67,16 @@ public class MainActivity extends AppCompatActivity {
                 handleAnimation();
 
                 feelTheVibe.setVisibility(View.VISIBLE);
-
                 feelTheVibe.startAnimation(feelTheVibeOffSet);
                 Activity2();
             }
         });
+    }
+
+    public void Activity2(){
+        Intent i = new Intent(this, Activity2.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
 
@@ -93,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     public void videoINIT(){
 
         videoBG = (VideoView) findViewById(R.id.video_splash);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sunset);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.hotelvideo);
 
         videoBG.setVideoURI(uri);
         videoBG.start();
@@ -103,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
             public void onPrepared(MediaPlayer mMediaPlayer) {
                 mMediaPlayer = mMediaPlayer;
                 mMediaPlayer.setLooping(true);
-
             }
         });
     }
@@ -113,12 +117,6 @@ public class MainActivity extends AppCompatActivity {
         TextView feelTheVibe = (TextView) findViewById(R.id.feel_the_vibe);
         overridePendingTransition(R.anim.fade_in_feel, R.anim.fade_out);
     }*/
-
-    public void Activity2(){
-        Intent i = new Intent(this, Activity2.class);
-        startActivity(i);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-    }
 
     @Override
     protected void onResume() {
@@ -132,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "OnPause()");
-        videoBG.pause();
     }
 
     @Override
