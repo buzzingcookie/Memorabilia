@@ -74,13 +74,13 @@ public class Activity2 extends AppCompatActivity {
     public void LobbyView(){
         Intent i = new Intent(this, SlickCycle.class);
         startActivity(i);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        overridePendingTransition(R.anim.standard_anim_fadein, R.anim.standard_anim_fadeout);
     }
 
     public void ConferenceHallView(){
         Intent i = new Intent(this, ConferenceHallView.class);
         startActivity(i);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        overridePendingTransition(R.anim.standard_anim_fadein, R.anim.standard_anim_fadeout);
     }
 
 
