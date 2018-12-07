@@ -11,15 +11,16 @@
     <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
         android:id="@+id/horizontal_cycle"
         android:layout_width="match_parent"
-        android:layout_height="723dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
-        app:icvp_scroll_duration="200"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
         app:icvp_center_page_scale_offset="10dp"
-        app:icvp_min_page_scale_offset="5dp"
+        app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
         app:icvp_max_page_scale="0.8"
+        app:icvp_medium_scaled="false"
         app:icvp_min_page_scale="0.55"
-        app:icvp_medium_scaled="false" />
+        app:icvp_min_page_scale_offset="5dp"
+        app:icvp_scroll_duration="200" />
 
 </RelativeLayout>

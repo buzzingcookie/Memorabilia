@@ -22,27 +22,14 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 import android.widget.VideoView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button logoButton;
+    ImageButton logoButton;
     private VideoView videoBG;
     MediaPlayer mMediaPlayer;
-    public void videoINIT(){
-
-        videoBG = (VideoView) findViewById(R.id.video_splash);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sunset);
-
-            videoBG.setVideoURI(uri);
-            videoBG.start();
-
-            videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mMediaPlayer) {
-                    mMediaPlayer = mMediaPlayer;
-                    mMediaPlayer.setLooping(true);
-                }
-        });
-    }
 
 
     @Override
@@ -52,11 +39,47 @@ public class MainActivity extends AppCompatActivity {
 
             videoINIT();
 
-            logoButton = (Button) findViewById(R.id.logo_button);
+            logoButton = (ImageButton) findViewById(R.id.logo_button);
+
+            YoYo.with(Techniques.ZoomIn)
+                .duration(1600)
+                .repeat(0)
+                .playOn(logoButton);
+
+        YoYo.with(Techniques.FlipInY)
+                .duration(2600)
+                .repeat(0)
+                .playOn(logoButton);
+
             logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                YoYo.with(Techniques.ZoomOut)
+                        .duration(1600)
+                        .repeat(0)
+                        .playOn(logoButton);
                 Activity2();
+            }
+        });
+
+
+
+    }
+
+    public void videoINIT(){
+
+        videoBG = (VideoView) findViewById(R.id.video_splash);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sunset);
+
+        videoBG.setVideoURI(uri);
+        videoBG.start();
+
+        videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mMediaPlayer) {
+                mMediaPlayer = mMediaPlayer;
+                mMediaPlayer.setLooping(true);
+
             }
         });
     }
@@ -64,12 +87,17 @@ public class MainActivity extends AppCompatActivity {
     public void Activity2(){
         Intent i = new Intent(this, Activity2.class);
         startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         videoBG.start();
+        YoYo.with(Techniques.ZoomIn)
+                .duration(1600)
+                .repeat(0)
+                .playOn(logoButton);
     }
 
     @Override

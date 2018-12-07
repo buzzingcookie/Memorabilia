@@ -18,6 +18,9 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 import android.widget.VideoView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class Activity2 extends AppCompatActivity {
 
     String Titles[] = {"LOBBY", "CONFERENCE HALL", "OASIS", "NIRVANA", "3rd HALF", "KING'S HALL", "ROCK ROYALTY"};
@@ -33,6 +36,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         ListView list = (ListView) findViewById(R.id.list1);
+        final ImageView rowImage = (ImageView) findViewById(R.id.row_image);
 
         MyAdapter adapter = new MyAdapter(this, Titles, rowImages, blackGradients, goldLogos);
         list.setAdapter(adapter);
@@ -42,6 +46,7 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 if (position == 0) {
+
                     LobbyView();
                 }
                 if (position == 1) {

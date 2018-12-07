@@ -32,7 +32,7 @@ public class LobbySliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
+    public boolean isViewFromObject(View view, @NonNull Object o) {
         return view == (ConstraintLayout) o;
     }
 
@@ -42,7 +42,7 @@ public class LobbySliderAdapter extends PagerAdapter {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
         View view = layoutInflater.inflate(R.layout.lobby_slide_layout,container,false);
-        
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

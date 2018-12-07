@@ -10,16 +10,18 @@ import android.widget.Toast;
 
 public class LobbyView extends AppCompatActivity {
 
-    private LobbySliderAdapter LobbySliderAdapter;
+    ViewPager mSlideViewPager;
+    LobbySliderAdapter LobbySliderAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lobby_activty_view);
 
-        ViewPager mSlideViewPager = findViewById(R.id.lobby_viewPager);
+        mSlideViewPager = findViewById(R.id.lobby_viewPager);
 
         LobbySliderAdapter = new LobbySliderAdapter(this);
+
         mSlideViewPager.setAdapter(LobbySliderAdapter);
     }
 
