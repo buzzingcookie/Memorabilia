@@ -37,6 +37,7 @@ public class MySlickAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
+
         View view = layoutInflater.inflate(R.layout.slick_item, container, false);
 
         TextView artistName = (TextView)view.findViewById(R.id.slick_artistName);

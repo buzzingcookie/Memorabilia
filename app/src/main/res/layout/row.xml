@@ -77,7 +77,7 @@
     <ImageView
         android:id="@+id/purple_bar"
         android:layout_width="match_parent"
-        android:layout_height="8dp"
+        android:layout_height="10dp"
         android:background="@color/hardRockPurple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

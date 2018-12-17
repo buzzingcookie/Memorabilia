@@ -5,4 +5,6 @@
     <string name="gradient_color">TODO</string>
     <string name="hotel_logo_white">TODO</string>
     <string name="splash_logoButton"></string>
+    <string name="acc_drawer_open"></string>
+    <string name="acc_drawer_close"></string>
 </resources>
