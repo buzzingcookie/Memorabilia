@@ -8,11 +8,15 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -20,6 +24,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -29,11 +34,10 @@ import com.daimajia.androidanimations.library.YoYo;
 public class a_SplashScreen extends AppCompatActivity {
 
     public static final String TAG = "SplashScreen";
+    Animation feelTheVibeOffSet, logoButtonOffSet;
 
     private TextView feelTheVibe;
     private ImageButton logoButton;
-    public ImageButton mHamburger;
-    Animation feelTheVibeOffSet, logoButtonOffSet;
 
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
@@ -43,6 +47,11 @@ public class a_SplashScreen extends AppCompatActivity {
 
     private VideoView videoBG;
     public MediaPlayer mMediaPlayer;
+    public ImageButton mHamburger;
+
+    ViewPager mViewPager;
+    private TextView[] mDots;
+    private LinearLayout mDotLayout;
 
 
     @Override
@@ -52,8 +61,11 @@ public class a_SplashScreen extends AppCompatActivity {
 
         videoINIT();
 
-            mHamburger = findViewById(R.id.white_hamburgerIcon);
+        mViewPager = (ViewPager) findViewById(R.id.view_Pager);
+        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
+            mDotLayout = (LinearLayout) findViewById(R.id.dot_layout);
+            mHamburger = findViewById(R.id.white_hamburgerIcon);
             mDrawerLayout = findViewById(R.id.drawer_layout);
             mNavigationView = findViewById(R.id.nav_view);
             cLayout = (ConstraintLayout) findViewById(R.id.content_layout);
@@ -82,7 +94,9 @@ public class a_SplashScreen extends AppCompatActivity {
                 }
             };
 
+
             mDrawerLayout.addDrawerListener(mDrawerToggle);
+
 
             feelTheVibe = (TextView) findViewById(R.id.feel_the_vibe);
             logoButton = (ImageButton) findViewById(R.id.logo_button);
@@ -119,7 +133,48 @@ public class a_SplashScreen extends AppCompatActivity {
                 Activity2();
             }
         });
+
+            addDotsIndicator(0);
+            mViewPager.addOnPageChangeListener(viewListener);
     }
+
+
+    public void addDotsIndicator(int position) {
+
+        mDots = new TextView[3];
+        mDotLayout.removeAllViews();
+
+        for(int i=0; i < mDots.length; i++) {
+
+            mDots[i] = new TextView(this);
+            mDots[i].setText(Html.fromHtml("&#8226"));
+            mDots[i].setTextSize(70);
+            mDots[i].setTextColor(getResources().getColor(R.color.hardRockGrey));
+
+            mDotLayout.addView(mDots[i]);
+        }
+
+        if (mDots.length > 0 ) {
+            mDots[position].setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+        }
+    }
+
+    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int i, float v, int i1) {
+
+        }
+
+        @Override
+        public void onPageSelected(int i) {
+            addDotsIndicator(i);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int i) {
+
+        }
+    };
 
     public void Activity2(){
         Intent i = new Intent(this, b_Zones.class);
@@ -185,5 +240,27 @@ public class a_SplashScreen extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         mMediaPlayer.release();
+    }
+
+    private class MyPagerAdapter extends FragmentPagerAdapter {
+
+        public MyPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int pos) {
+            switch(pos) {
+
+                case 0: return a_FirstFragment.newInstance("a_FirstFragment, Instance 1");
+                case 1: return a_SecondFragment.newInstance("a_SecondFragment, Instance 1");
+                default: return a_ThirdFragment.newInstance("a_ThirdFragment, Default");
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
+        }
     }
 }
