@@ -10,6 +10,16 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textSize="26dp"
-        android:text="3rd Fragment" />
+        android:text="3rd Fragment"
+        android:visibility="invisible"/>
+
+
+        <ListView
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>

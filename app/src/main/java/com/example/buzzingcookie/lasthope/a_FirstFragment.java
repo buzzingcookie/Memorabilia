@@ -1,5 +1,6 @@
 package com.example.buzzingcookie.lasthope;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
@@ -36,8 +37,25 @@ public class a_FirstFragment extends Fragment {
         TextView tv = (TextView) v.findViewById(R.id.tvFragFirst);
         tv.setText(getArguments().getString("msg"));
 
+        final Intent b_zones = new Intent(getActivity(), b_Zones.class);
+        ImageButton logoButton = (ImageButton) v.findViewById(R.id.logo_button);
+
+
+        YoYo.with(Techniques.FadeIn)
+                .duration(2500)
+                .repeat(0)
+                .playOn(logoButton);
+
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((a_SplashScreen)getActivity()).Activity2();
+            }
+        });
+
         return v;
     }
+
 
 
     public static a_FirstFragment newInstance(String text) {

@@ -49,8 +49,8 @@ public class b_Zones extends AppCompatActivity {
 
 
         ListView list = (ListView) findViewById(R.id.list1);
-        final ImageView rowImage = (ImageView) findViewById(R.id.row_image);
-
+        ImageView rowImage = (ImageView) findViewById(R.id.row_image);
+        /*
         MyAdapter adapter = new MyAdapter(this, Titles, rowImages, blackGradients, goldLogos);
         list.setAdapter(adapter);
         list.setDivider(null);
@@ -81,6 +81,7 @@ public class b_Zones extends AppCompatActivity {
                 }
             }
         });
+        */
     }
 
     public void LobbyView(){
@@ -94,9 +95,9 @@ public class b_Zones extends AppCompatActivity {
         startActivity(i);
         overridePendingTransition(R.anim.standard_anim_fadein, R.anim.standard_anim_fadeout);
     }
+        /*
 
-
-    public class MyAdapter extends ArrayAdapter<String> {
+    public static class MyAdapter extends ArrayAdapter<String> {
 
         Context context;
         String myTitles[];
@@ -138,4 +139,5 @@ public class b_Zones extends AppCompatActivity {
             return row;
         }
     }
+    */
 }

@@ -34,10 +34,10 @@ import com.daimajia.androidanimations.library.YoYo;
 public class a_SplashScreen extends AppCompatActivity {
 
     public static final String TAG = "SplashScreen";
-    Animation feelTheVibeOffSet, logoButtonOffSet;
 
-    private TextView feelTheVibe;
-    private ImageButton logoButton;
+    Animation feelTheVibeOffSet, logoButtonOffSet;
+    ViewPager mViewPager;
+
 
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
@@ -45,99 +45,127 @@ public class a_SplashScreen extends AppCompatActivity {
     private ConstraintLayout cLayout;
     private float lastTranslate = 0.0f;
 
-    private VideoView videoBG;
-    public MediaPlayer mMediaPlayer;
-    public ImageButton mHamburger;
-
-    ViewPager mViewPager;
     private TextView[] mDots;
     private LinearLayout mDotLayout;
+    private VideoView videoBG;
 
+
+    public MediaPlayer mMediaPlayer;
+    public ImageButton mHamburger;
+;   private ImageButton logoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a_splash_screen);
 
-        videoINIT();
-
+        cLayout = (ConstraintLayout) findViewById(R.id.content_layout);
         mViewPager = (ViewPager) findViewById(R.id.view_Pager);
-        mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        mDotLayout = (LinearLayout) findViewById(R.id.dot_layout);
 
-            mDotLayout = (LinearLayout) findViewById(R.id.dot_layout);
-            mHamburger = findViewById(R.id.white_hamburgerIcon);
-            mDrawerLayout = findViewById(R.id.drawer_layout);
-            mNavigationView = findViewById(R.id.nav_view);
-            cLayout = (ConstraintLayout) findViewById(R.id.content_layout);
-
-            mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher_background, R.string.acc_drawer_close)
-            {
-                @SuppressLint("NewApi")
-                public void onDrawerSlide(View drawerView, float slideOffset)
-                {
-                    super.onDrawerSlide(drawerView, slideOffset);
-                    float moveFactor = (mNavigationView.getWidth() * slideOffset);
-
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                    {
-                        cLayout.setTranslationX(moveFactor);
-                    }
-                    else
-                    {
-                        TranslateAnimation anim = new TranslateAnimation(lastTranslate, moveFactor, 0.0f, 0.0f);
-                        anim.setDuration(0);
-                        anim.setFillAfter(true);
-                        cLayout.startAnimation(anim);
-
-                        lastTranslate = moveFactor;
-                    }
-                }
-            };
+        mHamburger = findViewById(R.id.white_hamburgerIcon);
+        mDrawerLayout = findViewById(R.id.drawer_layout);
+        mNavigationView = findViewById(R.id.nav_view);
 
 
-            mDrawerLayout.addDrawerListener(mDrawerToggle);
+
+            videoINIT();
+            hamburgerIcon();
+            drawerSlider();
+            addDotsIndicator(0);
+            mViewPager.addOnPageChangeListener(viewListener);
+            mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG, "OnResume()");
+        videoBG.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "OnPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mMediaPlayer.release();
+    }
 
 
-            feelTheVibe = (TextView) findViewById(R.id.feel_the_vibe);
-            logoButton = (ImageButton) findViewById(R.id.logo_button);
+    public void videoINIT(){
 
-            Typeface typeface = Typeface.createFromAsset(this.getAssets(), "fonts/hard_rock_font.TTF");
-            feelTheVibe.setTypeface(typeface);
+        videoBG = (VideoView) findViewById(R.id.video_splash);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sunset);
 
+        videoBG.setVideoURI(uri);
+        videoBG.start();
 
-            feelTheVibeOffSet = AnimationUtils.loadAnimation(this, R.anim.fade_in_feel);
-            logoButtonOffSet = AnimationUtils.loadAnimation(this, R.anim.fade_out_logo);
+        videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mMediaPlayer) {
+                mMediaPlayer = mMediaPlayer;
+                mMediaPlayer.setLooping(true);
+            }
+        });
+    }
 
+    public void hamburgerIcon(){
 
-            feelTheVibe.setVisibility(View.INVISIBLE);
-
-            YoYo.with(Techniques.FadeIn)
-                .duration(3500)
-                .repeat(0)
-                .playOn(logoButton);
-
-            mHamburger.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mDrawerLayout.openDrawer(Gravity.START);
-                }
-            });
-
-            logoButton.setOnClickListener(new View.OnClickListener() {
+        mHamburger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                handleAnimation();
-
-                feelTheVibe.setVisibility(View.VISIBLE);
-                feelTheVibe.startAnimation(feelTheVibeOffSet);
-                Activity2();
+                mDrawerLayout.openDrawer(Gravity.START);
             }
         });
 
-            addDotsIndicator(0);
-            mViewPager.addOnPageChangeListener(viewListener);
     }
 
+    public void drawerSlider(){
+
+        //Drawer Layout Sliding.
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher_background, R.string.acc_drawer_close)
+        {
+            @SuppressLint("NewApi")
+            public void onDrawerSlide(View drawerView, float slideOffset)
+            {
+                super.onDrawerSlide(drawerView, slideOffset);
+                float moveFactor = (mNavigationView.getWidth() * slideOffset);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                {
+                    cLayout.setTranslationX(moveFactor);
+                }
+                else
+                {
+                    TranslateAnimation anim = new TranslateAnimation(lastTranslate, moveFactor, 0.0f, 0.0f);
+                    anim.setDuration(0);
+                    anim.setFillAfter(true);
+                    cLayout.startAnimation(anim);
+
+                    lastTranslate = moveFactor;
+                }
+            }
+        };
+
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
+
+    }
+
+    public void Activity2(){
+        Intent i = new Intent(this, b_Zones.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
 
     public void addDotsIndicator(int position) {
 
@@ -159,6 +187,7 @@ public class a_SplashScreen extends AppCompatActivity {
         }
     }
 
+
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int i, float v, int i1) {
@@ -175,72 +204,6 @@ public class a_SplashScreen extends AppCompatActivity {
 
         }
     };
-
-    public void Activity2(){
-        Intent i = new Intent(this, b_Zones.class);
-        startActivity(i);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-    }
-
-
-    public void handleAnimation(){
-
-        TranslateAnimation animation = new TranslateAnimation(0, 0, 0, -350);
-        animation.setDuration(3000);
-        animation.setFillAfter(true);
-        logoButton.startAnimation(animation);
-    }
-
-    public void handleAnimationOnResume(){
-
-        TranslateAnimation animation = new TranslateAnimation(0, 0, 0, 0);
-        animation.setDuration(0);
-        animation.setFillAfter(true);
-        logoButton.startAnimation(animation);
-    }
-
-    public void videoINIT(){
-
-        videoBG = (VideoView) findViewById(R.id.video_splash);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sunset);
-
-        videoBG.setVideoURI(uri);
-        videoBG.start();
-
-        videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mMediaPlayer) {
-                mMediaPlayer = mMediaPlayer;
-                mMediaPlayer.setLooping(true);
-            }
-        });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(TAG, "OnResume()");
-        videoBG.start();
-        handleAnimationOnResume();
-        feelTheVibe.setVisibility(View.INVISIBLE);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(TAG, "OnPause()");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mMediaPlayer.release();
-    }
 
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
@@ -262,5 +225,5 @@ public class a_SplashScreen extends AppCompatActivity {
         public int getCount() {
             return 3;
         }
-    }
+        }
 }
