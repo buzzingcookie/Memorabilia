@@ -8,19 +8,23 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_black_24dp"
-            android:title="Home" />
+            android:icon="@drawable/whitelogo"
+            android:title="HOME" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_location_city_black_24dp"
+            android:title="THE HOTEL" />
         <item
             android:id="@+id/nav_areas"
-            android:title="Areas"
-            android:icon="@drawable/ic_location_city_black_24dp"/>
+            android:title="SHOWS"
+            android:icon="@drawable/ic_music_note_black_24dp"/>
         <item
             android:id="@+id/nav_memorabilias"
-            android:title="Memorabilias"
+            android:title="MEMORABILIA"
             android:icon="@drawable/ic_album_black_24dp"/>
         <item
             android:id="@+id/nav_aboutUs"
-            android:title="About Us"
+            android:title="ABOUT HARD ROCK"
             android:icon="@drawable/ic_person_outline_black_24dp"/>
     </group>
 </menu>

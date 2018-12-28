@@ -22,8 +22,25 @@ public class LobbySliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public String[] lobby_slide_artistName = {"Alice Cooper","Metallica","ZZTop"};
-    public int[] lobby_slide_images = {R.drawable.splashscreen_button, R.drawable.whitelogo, R.drawable.whitelogo};
+    public String[] lobby_slide_artistName = {"That Guy","The Beatles","Divinity Roxxx"};
+    public String[] lobby_slide_bandName = {"(Marilyn Manson)","","(Beyonce)"};
+
+    public String[] lobby_slide_description = {
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
+            " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
+            " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
+            " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
+            " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
+            " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
+            " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+};
+
+
+    public int[] lobby_slide_images = {R.drawable.whitelogo, R.drawable.whitelogo, R.drawable.whitelogo};
 
 
     @Override
@@ -53,10 +70,14 @@ public class LobbySliderAdapter extends PagerAdapter {
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.lobby_memo_image);
         TextView slideArtistName = (TextView) view.findViewById(R.id.lobby_artist_name);
+        TextView slideBandName = (TextView) view.findViewById(R.id.lobby_band_name);
+        TextView slideDescription = (TextView) view.findViewById(R.id.lobby_description);
 
 
         slideImageView.setImageResource(lobby_slide_images[position]);
         slideArtistName.setText(lobby_slide_artistName[position]);
+        slideBandName.setText(lobby_slide_bandName[position]);
+        slideDescription.setText(lobby_slide_description[position]);
 
         container.addView(view);
 

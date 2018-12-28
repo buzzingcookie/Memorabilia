@@ -22,8 +22,9 @@ public class a_ThirdFragment extends Fragment {
     String Titles[] = {"LOBBY", "CONFERENCE HALL", "OASIS", "NIRVANA", "3rd HALF", "KING'S HALL", "ROCK ROYALTY"};
 
     int rowImages[] = {R.drawable.lobby, R.drawable.conferencehall, R.drawable.nirvanatower, R.drawable.nirvanatower2sunset, R.drawable.thirdhalf, R.drawable.kingshall, R.drawable.rockroyalty};
-    int blackGradients[] = {R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient, R.drawable.black_gradient};
+    int blackGradients[] = {R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle};
     int goldLogos[] = {R.drawable.whitelogo, R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo,R.drawable.whitelogo, };
+    int topBars[] = {0,R.drawable.purple_bar,R.drawable.purple_bar,R.drawable.purple_bar,R.drawable.purple_bar,R.drawable.purple_bar,R.drawable.purple_bar};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class a_ThirdFragment extends Fragment {
 
         final ImageView rowImage = (ImageView) v.findViewById(R.id.row_image);
 
-        MyAdapter adapter = new MyAdapter(getActivity(), Titles, rowImages, blackGradients, goldLogos);
+        MyAdapter adapter = new MyAdapter(getActivity(), Titles, rowImages, blackGradients, goldLogos, topBars);
         list.setAdapter(adapter);
         list.setDivider(null);
 
@@ -50,19 +51,19 @@ public class a_ThirdFragment extends Fragment {
                     ConferenceHallView();
                 }
                 if (position == 2) {
-                    Toast.makeText(getActivity(), "Item One Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Item Three Clicked", Toast.LENGTH_SHORT).show();
                 }
                 if (position == 3) {
-                    Toast.makeText(getActivity(), "Item One Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Item Four Clicked", Toast.LENGTH_SHORT).show();
                 }
                 if (position == 4) {
-                    Toast.makeText(getActivity(), "Item One Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Item Five Clicked", Toast.LENGTH_SHORT).show();
                 }
                 if (position == 5) {
-                    Toast.makeText(getActivity(), "Item One Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Item Six Clicked", Toast.LENGTH_SHORT).show();
                 }
                 if (position == 6) {
-                    Toast.makeText(getActivity(), "Item One Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Item Seven Clicked", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -72,15 +73,15 @@ public class a_ThirdFragment extends Fragment {
     }
 
     public void LobbyView(){
-        Intent i = new Intent(getActivity(), SlickCycle.class);
+        Intent i = new Intent(getActivity(), LobbyView.class);
         startActivity(i);
-        getActivity().overridePendingTransition(R.anim.standard_anim_fadein, R.anim.standard_anim_fadeout);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void ConferenceHallView(){
         Intent i = new Intent(getActivity(), ConferenceHallView.class);
         startActivity(i);
-        getActivity().overridePendingTransition(R.anim.standard_anim_fadein, R.anim.standard_anim_fadeout);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
 
@@ -102,8 +103,9 @@ public class a_ThirdFragment extends Fragment {
         int[] myRowImages;
         int[] myBlackgradients;
         int[] myGoldLogo;
+        int[] topBarList;
 
-        MyAdapter(Context c, String[] Titles, int[] rowImages, int[] blackGradients, int[] goldLogos) {
+        MyAdapter(Context c, String[] Titles, int[] rowImages, int[] blackGradients, int[] goldLogos, int[] topBarList) {
 
             super(c, R.layout.row, R.id.text1, Titles);
             this.context = c;
@@ -111,6 +113,7 @@ public class a_ThirdFragment extends Fragment {
             this.myRowImages = rowImages;
             this.myBlackgradients = blackGradients;
             this.myGoldLogo = goldLogos;
+            this.topBarList = topBarList;
         }
 
         @NonNull
@@ -124,6 +127,7 @@ public class a_ThirdFragment extends Fragment {
             ImageView rowimage = row.findViewById(R.id.row_image);
             ImageView black = row.findViewById(R.id.blackGradient);
             ImageView goldLogo = row.findViewById(R.id.gold_hrLogo);
+            ImageView topblack = row.findViewById(R.id.purple_bar);
 
             Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/apex-sans-book-regular.ttf");
             title.setTypeface(typeface);
@@ -133,6 +137,7 @@ public class a_ThirdFragment extends Fragment {
             rowimage.setImageResource(rowImages[position]);
             black.setImageResource(blackGradients[position]);
             goldLogo.setImageResource(goldLogos[position]);
+            topblack.setImageResource(topBars[position]);
 
             return row;
         }

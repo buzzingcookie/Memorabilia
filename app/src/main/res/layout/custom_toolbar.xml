@@ -17,26 +17,26 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="90dp"
+        android:layout_height="51dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="259dp"
-        android:layout_marginEnd="246dp"
-        android:layout_marginBottom="794dp"
+        android:layout_marginStart="249dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginBottom="782dp"
         android:background="@drawable/circle_container" />
+
 
     <ImageView
         android:id="@+id/toolbar_whitelogo"
-        android:layout_width="135dp"
+        android:layout_width="131dp"
         android:layout_height="93dp"
         android:layout_alignEnd="@+id/imageView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="238dp"
-        android:layout_marginEnd="227dp"
-        android:layout_marginBottom="794dp"
-
+        android:layout_marginStart="231dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginBottom="785dp"
         app:srcCompat="@drawable/no_tenerife_whitelogo" />
 
     <ImageButton
@@ -46,9 +46,9 @@
         android:layout_alignEnd="@+id/imageView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="540dp"
+        android:layout_marginStart="535dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/ic_menu_white_24dp" />
 
@@ -59,9 +59,19 @@
         android:layout_alignEnd="@+id/imageView2"
         android:layout_alignParentTop="true"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="78dp"
+        android:layout_marginEnd="82dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/ic_search_white_24dp" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="80dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_chevron_left_black_24dp" />
 
 
 </RelativeLayout>

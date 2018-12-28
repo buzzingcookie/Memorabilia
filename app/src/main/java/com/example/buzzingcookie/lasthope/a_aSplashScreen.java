@@ -1,5 +1,6 @@
 package com.example.buzzingcookie.lasthope;
 
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -19,10 +20,14 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -31,7 +36,7 @@ import android.widget.VideoView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-public class a_SplashScreen extends AppCompatActivity {
+public class a_aSplashScreen extends AppCompatActivity {
 
     public static final String TAG = "SplashScreen";
 
@@ -49,10 +54,11 @@ public class a_SplashScreen extends AppCompatActivity {
     private LinearLayout mDotLayout;
     private VideoView videoBG;
 
-
     public MediaPlayer mMediaPlayer;
     public ImageButton mHamburger;
 ;   private ImageButton logoButton;
+    private ImageButton backButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,16 +72,22 @@ public class a_SplashScreen extends AppCompatActivity {
         mHamburger = findViewById(R.id.white_hamburgerIcon);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mNavigationView = findViewById(R.id.nav_view);
-
-
+        backButton = findViewById(R.id.back_button);
 
             videoINIT();
+            backButton.setVisibility(View.INVISIBLE);
             hamburgerIcon();
-            drawerSlider();
             addDotsIndicator(0);
             mViewPager.addOnPageChangeListener(viewListener);
             mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+
     }
+
+    public ImageButton getBackButton() {
+        return this.backButton;
+    }
+
+
 
     @Override
     protected void onResume() {
@@ -105,7 +117,7 @@ public class a_SplashScreen extends AppCompatActivity {
     public void videoINIT(){
 
         videoBG = (VideoView) findViewById(R.id.video_splash);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sunset);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.hotelvideo);
 
         videoBG.setVideoURI(uri);
         videoBG.start();
@@ -124,7 +136,9 @@ public class a_SplashScreen extends AppCompatActivity {
         mHamburger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDrawerLayout.openDrawer(Gravity.START);
+
+                mDrawerLayout.openDrawer(Gravity.RIGHT);
+                drawerSlider();
             }
         });
 
@@ -135,11 +149,13 @@ public class a_SplashScreen extends AppCompatActivity {
         //Drawer Layout Sliding.
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher_background, R.string.acc_drawer_close)
         {
+
             @SuppressLint("NewApi")
             public void onDrawerSlide(View drawerView, float slideOffset)
             {
                 super.onDrawerSlide(drawerView, slideOffset);
-                float moveFactor = (mNavigationView.getWidth() * slideOffset);
+
+                float moveFactor = (mNavigationView.getWidth() * (-1 *(slideOffset)));
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
                 {
@@ -155,6 +171,19 @@ public class a_SplashScreen extends AppCompatActivity {
                     lastTranslate = moveFactor;
                 }
             }
+
+            @Override
+            public boolean onOptionsItemSelected(MenuItem item) {
+                if (item != null && item.getItemId() == android.R.id.home) {
+                    if (mDrawerLayout.isDrawerOpen(Gravity.RIGHT)) {
+                        mDrawerLayout.closeDrawer(Gravity.RIGHT);
+                    }
+                    else {
+                        mDrawerLayout.openDrawer(Gravity.RIGHT);
+                    }
+                }
+                return false;
+            }
         };
 
         mDrawerLayout.addDrawerListener(mDrawerToggle);
@@ -167,6 +196,7 @@ public class a_SplashScreen extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
+
     public void addDotsIndicator(int position) {
 
         mDots = new TextView[3];
@@ -177,13 +207,13 @@ public class a_SplashScreen extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226"));
             mDots[i].setTextSize(70);
-            mDots[i].setTextColor(getResources().getColor(R.color.hardRockGrey));
+            mDots[i].setTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
             mDotLayout.addView(mDots[i]);
         }
 
         if (mDots.length > 0 ) {
-            mDots[position].setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+            mDots[position].setTextColor(getResources().getColor(R.color.hardRockGold));
         }
     }
 
@@ -196,7 +226,25 @@ public class a_SplashScreen extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int i) {
+
             addDotsIndicator(i);
+
+            if(i > 0 ){
+                backButton.setVisibility(View.VISIBLE);
+                backButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (mViewPager.getCurrentItem() != 0) {
+                            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1,true);
+                        }else{
+                            finish();
+                        }
+                    }
+                });
+            }else {
+                backButton.setVisibility(View.INVISIBLE);
+            }
+
         }
 
         @Override
@@ -225,5 +273,5 @@ public class a_SplashScreen extends AppCompatActivity {
         public int getCount() {
             return 3;
         }
-        }
+    }
 }

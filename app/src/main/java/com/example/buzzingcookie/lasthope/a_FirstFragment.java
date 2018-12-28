@@ -1,19 +1,13 @@
 package com.example.buzzingcookie.lasthope;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -49,7 +43,7 @@ public class a_FirstFragment extends Fragment {
         logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((a_SplashScreen)getActivity()).Activity2();
+                ((a_aSplashScreen)getActivity()).Activity2();
             }
         });
 

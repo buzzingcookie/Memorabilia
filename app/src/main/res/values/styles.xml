@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/hardRockPurple</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -11,6 +11,24 @@
     <style name="NavigationViewStyle">
         <item name="android:textSize">22sp</item> <!-- menu item text size-->
         <item name="android:listPreferredItemHeightSmall">60dp</item><!-- menu item height-->
+    </style>
+
+    <style name="mydatepicker" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/hardRockPurple</item>
+        <item name="colorPrimaryDark">@color/hardRockPurple</item>
+        <item name="colorAccent">@color/hardRockGold</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:headerBackground">@color/hardRockGrey</item>
+        <item name="android:dayOfWeekBackground">@color/hardRockPurple</item>
+        <item name="android:dayOfWeekTextAppearance">@color/colorPrimaryDark</item>
+        <item name="android:headerMonthTextAppearance">@color/hardRockGold</item>
+        <item name="android:headerDayOfMonthTextAppearance">@color/hardRockGold</item>
+        <item name="android:headerYearTextAppearance">@color/hardRockGold</item>
+        <item name="android:yearListItemTextAppearance">@color/hardRockGold</item>
+        <item name="android:yearListSelectorColor">@color/hardRockGold</item>
+        <item name="android:calendarTextColor">@color/hardRockGold</item>
     </style>
 
 </resources>

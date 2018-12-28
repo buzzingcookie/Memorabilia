@@ -19,5 +19,6 @@ public class SlickCycle extends AppCompatActivity {
 
         MySlickAdapter adapter = new MySlickAdapter(this);
         pager.setAdapter(adapter);
+        pager.getRealItem();
     }
 }
