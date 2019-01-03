@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.buzzingcookie.lasthope.databinding.ConferencehallSlideLayoutBinding;
+
 public class ConferenceHallView extends AppCompatActivity {
 
+    ConferencehallSlideLayoutBinding mBinding;
     private ViewPager mSlideViewPager;
     private ConferenceHallSliderAdapter ConferenceHallSliderAdapter;
     ImageButton backButton;

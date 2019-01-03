@@ -11,7 +11,7 @@
             android:icon="@drawable/whitelogo"
             android:title="HOME" />
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_hotel"
             android:icon="@drawable/ic_location_city_black_24dp"
             android:title="THE HOTEL" />
         <item

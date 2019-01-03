@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -39,13 +40,12 @@ import com.daimajia.androidanimations.library.YoYo;
 public class a_aSplashScreen extends AppCompatActivity {
 
     public static final String TAG = "SplashScreen";
-
     Animation feelTheVibeOffSet, logoButtonOffSet;
     ViewPager mViewPager;
+    NavigationView mNavigationView;
 
 
     private DrawerLayout mDrawerLayout;
-    private NavigationView mNavigationView;
     private ActionBarDrawerToggle mDrawerToggle;
     private ConstraintLayout cLayout;
     private float lastTranslate = 0.0f;
@@ -80,14 +80,35 @@ public class a_aSplashScreen extends AppCompatActivity {
             addDotsIndicator(0);
             mViewPager.addOnPageChangeListener(viewListener);
             mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+    }
 
+    public void navigationItemSelector(){
+
+        mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()){
+
+                    case R.id.nav_home:
+
+                    case R.id.nav_hotel:
+
+                    case R.id.nav_areas:
+
+                    case R.id.nav_memorabilias:
+
+                    case R.id.nav_aboutUs:
+
+                }
+                return false;
+            }
+        });
     }
 
     public ImageButton getBackButton() {
         return this.backButton;
     }
-
-
 
     @Override
     protected void onResume() {
@@ -112,7 +133,6 @@ public class a_aSplashScreen extends AppCompatActivity {
         super.onDestroy();
         mMediaPlayer.release();
     }
-
 
     public void videoINIT(){
 
@@ -155,7 +175,7 @@ public class a_aSplashScreen extends AppCompatActivity {
             {
                 super.onDrawerSlide(drawerView, slideOffset);
 
-                float moveFactor = (mNavigationView.getWidth() * (-1 *(slideOffset)));
+                float moveFactor = (mNavigationView.getWidth() * (-1 * (slideOffset)));
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
                 {
@@ -196,7 +216,6 @@ public class a_aSplashScreen extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
-
     public void addDotsIndicator(int position) {
 
         mDots = new TextView[3];
@@ -216,7 +235,6 @@ public class a_aSplashScreen extends AppCompatActivity {
             mDots[position].setTextColor(getResources().getColor(R.color.hardRockGold));
         }
     }
-
 
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
         @Override
