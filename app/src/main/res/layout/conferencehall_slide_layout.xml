@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable
-            name="memorabilia"
-            type="com.example.buzzingcookie.lasthope.model.Memorabilia" />
-    </data>
 <android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/conferenceHall_artist_name"
+        android:layout_width="398dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sample Text"
+        android:textAlignment="center"
+        android:textColor="@color/hardRockGold"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/conferenceHall_band_name"
+        android:layout_width="398dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sample Text"
+        android:textAlignment="center"
+        android:textColor="@color/hardRockGold"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/conferenceHall_memo_image"
@@ -24,23 +51,25 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564"
+        app:layout_constraintVertical_bias="0.419"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/conferenceHall_artist_name"
-        android:layout_width="398dp"
-        android:layout_height="85dp"
+        android:id="@+id/conferenceHall_description"
+        android:layout_width="469dp"
+        android:layout_height="149dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="548dp"
         android:layout_marginEnd="8dp"
-        android:text=""
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         android:textAlignment="center"
         android:textColor="@color/hardRockGold"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </android.support.constraint.ConstraintLayout>
-</layout>

@@ -29,7 +29,7 @@ public class a_SecondFragment extends Fragment implements DatePickerDialog.OnDat
 
 
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.hardrockhotels.com/");
+        webView.loadUrl("https://vibelineup.wordpress.com/");
 
         return v;
     }

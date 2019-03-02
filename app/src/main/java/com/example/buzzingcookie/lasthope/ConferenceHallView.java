@@ -10,7 +10,6 @@ import com.example.buzzingcookie.lasthope.databinding.ConferencehallSlideLayoutB
 
 public class ConferenceHallView extends AppCompatActivity {
 
-    ConferencehallSlideLayoutBinding mBinding;
     private ViewPager mSlideViewPager;
     private ConferenceHallSliderAdapter ConferenceHallSliderAdapter;
     ImageButton backButton;
@@ -25,6 +24,7 @@ public class ConferenceHallView extends AppCompatActivity {
         mSlideViewPager.setAdapter(ConferenceHallSliderAdapter);
 
         backButton = findViewById(R.id.back_button);
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

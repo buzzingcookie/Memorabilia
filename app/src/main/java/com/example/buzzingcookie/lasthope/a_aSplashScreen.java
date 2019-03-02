@@ -92,9 +92,9 @@ public class a_aSplashScreen extends AppCompatActivity {
 
                     case R.id.nav_home:
 
-                    case R.id.nav_hotel:
+                    case R.id.nav_shows:
 
-                    case R.id.nav_areas:
+                    case R.id.nav_hotel:
 
                     case R.id.nav_memorabilias:
 

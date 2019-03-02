@@ -11,13 +11,13 @@
             android:icon="@drawable/whitelogo"
             android:title="HOME" />
         <item
-            android:id="@+id/nav_hotel"
-            android:icon="@drawable/ic_location_city_black_24dp"
-            android:title="THE HOTEL" />
+            android:id="@+id/nav_shows"
+            android:icon="@drawable/ic_music_note_black_24dp"
+            android:title="SHOWS" />
         <item
-            android:id="@+id/nav_areas"
-            android:title="SHOWS"
-            android:icon="@drawable/ic_music_note_black_24dp"/>
+            android:id="@+id/nav_hotel"
+            android:title="THE HOTEL"
+            android:icon="@drawable/ic_location_city_black_24dp"/>
         <item
             android:id="@+id/nav_memorabilias"
             android:title="MEMORABILIA"
