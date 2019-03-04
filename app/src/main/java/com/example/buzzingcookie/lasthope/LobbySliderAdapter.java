@@ -1,7 +1,6 @@
 package com.example.buzzingcookie.lasthope;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class LobbySliderAdapter extends PagerAdapter {
 
@@ -22,8 +20,8 @@ public class LobbySliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public String[] lobby_slide_artistName = {"That Guy","The Beatles","Divinity Roxxx"};
-    public String[] lobby_slide_bandName = {"(Marilyn Manson)","","(Beyonce)"};
+    public String[] lobby_slide_artistName = {"Britney Spears","Tim Skold","Billy Duffy"};
+    public String[] lobby_slide_bandName = {"","(Marilyn Manson)","(The Cult)"};
 
     public String[] lobby_slide_description = {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
@@ -40,7 +38,7 @@ public class LobbySliderAdapter extends PagerAdapter {
 };
 
 
-    public int[] lobby_slide_images = {R.drawable.whitelogo, R.drawable.whitelogo, R.drawable.whitelogo};
+    public int[] lobby_slide_images = {R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold, R.drawable.memorabilia_billyduffy};
 
 
     @Override

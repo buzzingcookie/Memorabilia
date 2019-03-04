@@ -43,6 +43,7 @@ public class a_aSplashScreen extends AppCompatActivity {
     Animation feelTheVibeOffSet, logoButtonOffSet;
     ViewPager mViewPager;
     NavigationView mNavigationView;
+    MediaPlayer mPlayer;
 
 
     private DrawerLayout mDrawerLayout;
@@ -58,6 +59,7 @@ public class a_aSplashScreen extends AppCompatActivity {
     public ImageButton mHamburger;
 ;   private ImageButton logoButton;
     private ImageButton backButton;
+    private ImageButton muteButton;
 
 
     @Override
@@ -73,6 +75,11 @@ public class a_aSplashScreen extends AppCompatActivity {
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mNavigationView = findViewById(R.id.nav_view);
         backButton = findViewById(R.id.back_button);
+        muteButton = findViewById(R.id.white_muteButton);
+
+            mPlayer = MediaPlayer.create(this,R.raw.backinblack);
+            mPlayer.start();
+            mPlayer.setLooping(true);
 
             videoINIT();
             backButton.setVisibility(View.INVISIBLE);
@@ -80,6 +87,8 @@ public class a_aSplashScreen extends AppCompatActivity {
             addDotsIndicator(0);
             mViewPager.addOnPageChangeListener(viewListener);
             mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+
+
     }
 
     public void navigationItemSelector(){
@@ -113,6 +122,7 @@ public class a_aSplashScreen extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        mPlayer.start();
         Log.i(TAG, "OnResume()");
         videoBG.start();
     }
@@ -121,11 +131,19 @@ public class a_aSplashScreen extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "OnPause()");
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+    }
+
+    private void stopPlayer() {
+        if (mPlayer != null) {
+            mPlayer.release();
+            mPlayer = null;
+        }
     }
 
     @Override

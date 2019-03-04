@@ -36,7 +36,7 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/view_Pager"
             android:layout_width="match_parent"
-            android:layout_height="822dp"
+            android:layout_height="1174dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -48,11 +48,10 @@
             android:layout_width="89dp"
             android:layout_height="67dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="760dp"
+            android:layout_marginTop="1096dp"
             android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/video_splash">
 

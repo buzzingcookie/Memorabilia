@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.buzzingcookie.lasthope.databinding.ConferencehallSlideLayoutBinding;
 import com.example.buzzingcookie.lasthope.model.Memorabilia;
 import com.example.buzzingcookie.lasthope.util.Memorabilias;
 
@@ -24,8 +23,8 @@ public class ConferenceHallSliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public String[] conferenceHall_artistName = {"That Guy","The Beatles","Divinity Roxxx"};
-    public String[] conferenceHall_bandName = {"(Marilyn Manson)","","(Beyonce)"};
+    public String[] conferenceHall_artistName = {"Rihanna","The Beatles","Amy Winehouse"};
+    public String[] conferenceHall_bandName = {"","",""};
 
     public String[] conferenceHall_slide_description = {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
@@ -42,7 +41,7 @@ public class ConferenceHallSliderAdapter extends PagerAdapter {
     };
 
 
-    public int[] conferenceHall_images = {R.drawable.whitelogo, R.drawable.whitelogo, R.drawable.whitelogo};
+    public int[] conferenceHall_images = {R.drawable.memorabilia_rihanna, R.drawable.memorabilia_beatlescontract, R.drawable.memorabilia_amywine};
 
     @Override
     public int getCount() {return conferenceHall_artistName.length; }

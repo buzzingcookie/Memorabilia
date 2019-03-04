@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.buzzingcookie.lasthope">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/blacklogo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".a_aSplashScreen">
+        android:theme="@style/AppTheme"
+        android:configChanges="orientation|screenSize|keyboardHidden">
+        <activity
+            android:name=".a_aSplashScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".b_Zones" />
-        <activity android:name=".LobbyView" />
-        <activity android:name=".ConferenceHallView" />
-        <activity android:name=".SlickCycle"></activity>
+        <activity android:name=".b_Zones" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name=".LobbyView" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name=".ConferenceHallView" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name=".SlickCycle" android:launchMode="singleTask"/>
+        <activity android:name=".OasisView" android:launchMode="singleTask"/>
+        <activity android:name=".NirvanaView" android:launchMode="singleTask"/>
+        <activity android:name=".ThirdHalfView" android:launchMode="singleTask"/>
+        <activity android:name=".KingsHall" android:launchMode="singleTask"/>
+        <activity android:name=".RockRoyaltyView"></activity>
     </application>
 
 </manifest>
