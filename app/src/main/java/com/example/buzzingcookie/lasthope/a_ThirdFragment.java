@@ -15,7 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class a_ThirdFragment extends Fragment {
 
@@ -51,19 +50,19 @@ public class a_ThirdFragment extends Fragment {
                     ConferenceHallView();
                 }
                 if (position == 2) {
-                    Toast.makeText(getActivity(), "Item Three Clicked", Toast.LENGTH_SHORT).show();
+                    OasisView();
                 }
                 if (position == 3) {
-                    Toast.makeText(getActivity(), "Item Four Clicked", Toast.LENGTH_SHORT).show();
+                    NirvanaView();
                 }
                 if (position == 4) {
-                    Toast.makeText(getActivity(), "Item Five Clicked", Toast.LENGTH_SHORT).show();
+                    ThirdHalfView();
                 }
                 if (position == 5) {
-                    Toast.makeText(getActivity(), "Item Six Clicked", Toast.LENGTH_SHORT).show();
+                    KingsHall();
                 }
                 if (position == 6) {
-                    Toast.makeText(getActivity(), "Item Seven Clicked", Toast.LENGTH_SHORT).show();
+                    RockRoyalty();
                 }
             }
         });
@@ -80,6 +79,36 @@ public class a_ThirdFragment extends Fragment {
 
     public void ConferenceHallView(){
         Intent i = new Intent(getActivity(), ConferenceHallView.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void OasisView(){
+        Intent i = new Intent(getActivity(), OasisView.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void NirvanaView(){
+        Intent i = new Intent(getActivity(), NirvanaView.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void ThirdHalfView(){
+        Intent i = new Intent(getActivity(), ThirdHalfView.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void KingsHall(){
+        Intent i = new Intent(getActivity(), KingsHallView.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void RockRoyalty(){
+        Intent i = new Intent(getActivity(), RockRoyaltyView.class);
         startActivity(i);
         getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

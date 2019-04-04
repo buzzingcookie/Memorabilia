@@ -23,25 +23,53 @@ public class ConferenceHallSliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public String[] conferenceHall_artistName = {"Rihanna","The Beatles","Amy Winehouse"};
-    public String[] conferenceHall_bandName = {"","",""};
+    public String[] conferenceHall_artistName = {
+            "Steven Tyler","Rihanna",
+            "Robbie Williams", "Taylor Swift",
+            "Liberace", "Paul McCartney",
+            "David Bowie", "The Temptations"
+    };
+
+    public String[] conferenceHall_bandName = {
+            "(Aerosmith)","",
+            "", "",
+            "","The Beatles",
+            "", ""
+    };
 
     public String[] conferenceHall_slide_description = {
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-                    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
-                    " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Legendary Aerosmith frontman Steven Tyler wore this striped jumpsuit on stage during the band's 1989 - 1990 tour in support of their smash" +
+                    "hit album 'Pump'.",
 
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-                    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
-                    " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Pop superstar Rihanna wore this JGerald dress in 2009 when she visited the Palais Maillot nightclub in Paris.",
 
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-                    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute" +
-                    " irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            "British pop legend Robbie Williams wore this Asian-inspired outfit in the video for his 2006 hit, 'Sin Sin Sin'.",
+
+            "Though she got her start as a young Nashville country singer, Taylor Swift evolved into a world-wide pop star and" +
+                    " became one of the most successful and beloved artists of the 21st century. Shw wore this vintage floral dress while " +
+                    "vacationing in Hyannis Port, Massachusetts, USA in 2012.",
+
+            "This is an original contract for a 1968 Liberace performance in Montreal.",
+
+            "This document is an absolutely incredible piece of history. It's Paul McCartney's handwritten, itemized expense report for The Beatles" +
+                    "1960 trip to Hamburg and was a major factor in their development as a band. Take some time to read McCartney's responses." +
+                    "Some of his stated expenses include 'leather trousers', 'cigarettes', 'drinks', and 'bass guitar'.",
+
+            "This document is a true piece of history. it's a one-year booking contract between David Bowie and the William Morris Agency " +
+                    "signed in 1972. This was at the height of Bowie's iconic 'Ziggy Stardust' period.",
+
+            "With huge hits like 'My Girl', 'Ain't Too Proud to Beg' and 'Papa was a Rollin Stone', Motown legends The Temptations were " +
+                    "one of the most successful acts of the 1960s. This page of handwritten lyrics is for a song entitled 'My Eyes Are Wide Open'." +
+                    "It's in musical director Cornelius Grant's handwriting."
     };
 
 
-    public int[] conferenceHall_images = {R.drawable.memorabilia_rihanna, R.drawable.memorabilia_beatlescontract, R.drawable.memorabilia_amywine};
+    public int[] conferenceHall_images = {
+            R.drawable.memorabilia_rihanna, R.drawable.memorabilia_rihanna,
+            R.drawable.memorabilia_amywine,R.drawable.memorabilia_amywine,
+            R.drawable.memorabilia_rihanna, R.drawable.memorabilia_beatlescontract,
+            R.drawable.memorabilia_amywine,R.drawable.memorabilia_amywine
+    };
 
     @Override
     public int getCount() {return conferenceHall_artistName.length; }

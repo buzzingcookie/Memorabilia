@@ -30,6 +30,7 @@ public class a_SecondFragment extends Fragment implements DatePickerDialog.OnDat
 
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://vibelineup.wordpress.com/");
+        webView.getSettings().setJavaScriptEnabled(true);
 
         return v;
     }
@@ -45,6 +46,14 @@ public class a_SecondFragment extends Fragment implements DatePickerDialog.OnDat
         return f;
     }
 
+    public void onBackPressed() {
+        if(webView.canGoBack()){
+            webView.goBack();
+        }
+        else{
+            super.onPause();
+        }
+    }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {

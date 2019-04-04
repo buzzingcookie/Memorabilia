@@ -6,20 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class RockRoyaltyView extends AppCompatActivity {
+public class KingsHallView extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
-    private RockRoyaltySliderAdapter RockRoyaltySliderAdapter;
+    private KingsHallSliderAdapter KingsHallSliderAdapter;
     ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rock_royalty_view);
+        setContentView(R.layout.activity_kings_hall);
 
-        mSlideViewPager = (ViewPager) findViewById(R.id.rockRoyaltyView_viewPager);
-        RockRoyaltySliderAdapter = new RockRoyaltySliderAdapter(this);
-        mSlideViewPager.setAdapter(RockRoyaltySliderAdapter);
+        mSlideViewPager = (ViewPager) findViewById(R.id.KingsHallView_viewPager);
+        KingsHallSliderAdapter = new KingsHallSliderAdapter(this);
+        mSlideViewPager.setAdapter(KingsHallSliderAdapter);
 
         backButton = findViewById(R.id.back_button_views);
 

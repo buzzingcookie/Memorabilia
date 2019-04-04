@@ -1,6 +1,7 @@
 package com.example.buzzingcookie.lasthope;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -23,6 +24,7 @@ public class a_FirstFragment extends Fragment {
 
     public ImageButton mHamburger;
     private DrawerLayout mDrawerLayout;
+    private TextView mMemoTour;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class a_FirstFragment extends Fragment {
 
         final Intent b_zones = new Intent(getActivity(), b_Zones.class);
         ImageButton logoButton = (ImageButton) v.findViewById(R.id.logo_button);
-
+        mMemoTour = (TextView) v.findViewById(R.id.memo_tour);
 
         YoYo.with(Techniques.FadeIn)
                 .duration(2500)

@@ -117,7 +117,7 @@ public class b_Zones extends AppCompatActivity {
             ImageView black = row.findViewById(R.id.blackGradient);
             ImageView goldLogo = row.findViewById(R.id.gold_hrLogo);
 
-            Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/apex-sans-book-regular.ttf");
+            Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/apex_sans.ttf");
             title.setTypeface(typeface);
 
 

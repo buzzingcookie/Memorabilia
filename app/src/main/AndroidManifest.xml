@@ -30,7 +30,7 @@
         <activity android:name=".OasisView" android:launchMode="singleTask"/>
         <activity android:name=".NirvanaView" android:launchMode="singleTask"/>
         <activity android:name=".ThirdHalfView" android:launchMode="singleTask"/>
-        <activity android:name=".KingsHall" android:launchMode="singleTask"/>
+        <activity android:name=".KingsHallView" android:launchMode="singleTask"/>
         <activity android:name=".RockRoyaltyView"></activity>
     </application>
 

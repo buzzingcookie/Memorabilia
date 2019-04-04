@@ -56,6 +56,7 @@ public class a_aSplashScreen extends AppCompatActivity {
     private VideoView videoBG;
 
     public MediaPlayer mMediaPlayer;
+
     public ImageButton mHamburger;
 ;   private ImageButton logoButton;
     private ImageButton backButton;
