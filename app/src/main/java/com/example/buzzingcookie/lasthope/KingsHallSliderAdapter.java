@@ -35,8 +35,8 @@ public class KingsHallSliderAdapter extends PagerAdapter {
 
 
     public int[] kingsHall_slide_images = {
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy
+            R.drawable.michaeljacksongood, R.drawable.elvispresleygood,
+            R.drawable.stevienicksgood
     };
 
 

@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class a_ThirdFragment extends Fragment {
 
-    String Titles[] = {"LOBBY", "CONFERENCE HALL", "OASIS", "NIRVANA", "3rd HALF", "KING'S HALL", "ROCK ROYALTY"};
+    String Titles[] = {"LOBBY", "CONFERENCE HALL", "OASIS", "NIRVANA", "3rd HALF", "THE KING'S & THE QUEEN", "ROCK ROYALTY"};
 
     int rowImages[] = {R.drawable.lobby, R.drawable.conferencehall, R.drawable.nirvanatower, R.drawable.nirvanatower2sunset, R.drawable.thirdhalf, R.drawable.kingshall, R.drawable.rockroyalty};
     int blackGradients[] = {R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle, R.drawable.list_rectangle};

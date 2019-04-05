@@ -3,11 +3,13 @@ package com.example.buzzingcookie.lasthope;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -32,8 +34,29 @@ public class a_SecondFragment extends Fragment implements DatePickerDialog.OnDat
         webView.loadUrl("https://vibelineup.wordpress.com/");
         webView.getSettings().setJavaScriptEnabled(true);
 
+        webView.setWebViewClient(new WebViewClient());
+
+        webView.setWebChromeClient(new WebChromeClient(){
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                super.onProgressChanged(view, newProgress);
+            }
+
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+            }
+
+            @Override
+            public void onReceivedIcon(WebView view, Bitmap icon) {
+                super.onReceivedIcon(view, icon);
+            }
+        });
+
         return v;
     }
+
+
 
     public static a_SecondFragment newInstance(String text) {
 
@@ -46,14 +69,6 @@ public class a_SecondFragment extends Fragment implements DatePickerDialog.OnDat
         return f;
     }
 
-    public void onBackPressed() {
-        if(webView.canGoBack()){
-            webView.goBack();
-        }
-        else{
-            super.onPause();
-        }
-    }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {

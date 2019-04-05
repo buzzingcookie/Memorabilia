@@ -46,7 +46,10 @@ public class ThirdHalfSliderAdapter extends PagerAdapter {
     };
 
 
-    public int[] thirdHalf_slide_images = {R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold, R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy};
+    public int[] thirdHalf_slide_images = {
+            R.drawable.memorabilia_bitney_spears, R.drawable.katyperrygood2,
+            R.drawable.santiagoauserongood,R.drawable.leivagood
+    };
 
 
     @Override

@@ -87,14 +87,14 @@ public class NirvanaSliderAdapter extends PagerAdapter {
 
 
     public int[] nirvana_slide_images = {
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy
+            R.drawable.slashgood, R.drawable.christinagood,
+            R.drawable.georgeclintongood,R.drawable.philcollinsgood,
+            R.drawable.juanesgood, R.drawable.jameslomenogood,
+            R.drawable.calle13good,R.drawable.jessejohnsongood,
+            R.drawable.tommyleegood, R.drawable.black_gradient,
+            R.drawable.williamgood,R.drawable.iggyazaleagood,
+            R.drawable.brucegood, R.drawable.amygood,
+            R.drawable.black_gradient,R.drawable.beyoncegood
     };
 
 

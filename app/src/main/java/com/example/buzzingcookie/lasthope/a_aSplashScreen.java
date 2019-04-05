@@ -56,6 +56,7 @@ public class a_aSplashScreen extends AppCompatActivity {
     private VideoView videoBG;
 
     public MediaPlayer mMediaPlayer;
+    public WebView webView;
 
     public ImageButton mHamburger;
 ;   private ImageButton logoButton;
@@ -90,6 +91,15 @@ public class a_aSplashScreen extends AppCompatActivity {
             mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+        } else {
+        super.onBackPressed();
+        }
     }
 
     public void navigationItemSelector(){

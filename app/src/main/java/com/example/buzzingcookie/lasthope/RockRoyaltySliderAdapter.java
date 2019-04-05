@@ -31,7 +31,7 @@ public class RockRoyaltySliderAdapter extends PagerAdapter {
     };
 
 
-    public int[] rockRoyalty_slide_images = {R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold};
+    public int[] rockRoyalty_slide_images = {R.drawable.mattsorumgood, R.drawable.brainmantiagood};
 
 
     @Override

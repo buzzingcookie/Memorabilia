@@ -33,7 +33,7 @@ public class ConferenceHallSliderAdapter extends PagerAdapter {
     public String[] conferenceHall_bandName = {
             "(Aerosmith)","",
             "", "",
-            "","The Beatles",
+            "","(The Beatles)",
             "", ""
     };
 
@@ -65,10 +65,10 @@ public class ConferenceHallSliderAdapter extends PagerAdapter {
 
 
     public int[] conferenceHall_images = {
-            R.drawable.memorabilia_rihanna, R.drawable.memorabilia_rihanna,
-            R.drawable.memorabilia_amywine,R.drawable.memorabilia_amywine,
-            R.drawable.memorabilia_rihanna, R.drawable.memorabilia_beatlescontract,
-            R.drawable.memorabilia_amywine,R.drawable.memorabilia_amywine
+            R.drawable.steventylergood, R.drawable.rihannagood,
+            R.drawable.robbiewilliamsgood,R.drawable.taylorswiftgood,
+            R.drawable.liberacegood, R.drawable.paulmccartneygood,
+            R.drawable.davidbowiegoodalmost,R.drawable.temptationsgood
     };
 
     @Override

@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/thirdHalfView_artist_name"
-        android:layout_width="398dp"
-        android:layout_height="85dp"
+        android:layout_width="757dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="Sample Text"
@@ -39,18 +39,17 @@
 
     <ImageView
         android:id="@+id/thirdHalfView_memo_image"
-        android:layout_width="624dp"
-        android:layout_height="496dp"
+        android:layout_width="700dp"
+        android:layout_height="684dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226"
+        app:layout_constraintVertical_bias="0.307"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
@@ -58,7 +57,7 @@
         android:layout_width="605dp"
         android:layout_height="258dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="848dp"
         android:layout_marginEnd="8dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         android:textAlignment="center"

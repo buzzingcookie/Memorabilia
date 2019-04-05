@@ -38,7 +38,7 @@ public class LobbySliderAdapter extends PagerAdapter {
             "(Marilyn Manson)", "",
             "", "",
             "", "(The Who)",
-            "(The Who)", "Sly Stone",
+            "(The Who)", "Sly & The Family Stone",
             "(Mana)", "",
             "", "",
             ""
@@ -94,16 +94,15 @@ public class LobbySliderAdapter extends PagerAdapter {
     };
 
     public int[] lobby_slide_images = {
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_billyduffy
+            R.drawable.eltonjohnnygood, R.drawable.billyduffygood,
+            R.drawable.matthealygood,R.drawable.divinityroxxgood,
+            R.drawable.timskoldgood,R.drawable.britneyspearsgood1,
+            R.drawable.anatorrojagood,R.drawable.loquillogood,
+            R.drawable.joaquinsabinagood,R.drawable.johnentwistlegood,
+            R.drawable.johnentwistlegood,R.drawable.slystonegood,
+            R.drawable.sergiovallingood,R.drawable.ladygagagood,
+            R.drawable.beatlestenerifegood,R.drawable.ladygagagood,
+            R.drawable.aliciakeysgood
     };
 
     @Override

@@ -89,14 +89,14 @@ public class OasisSliderAdapter extends PagerAdapter {
 
 
     public int[] oasis_slide_images = {
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy,
-            R.drawable.memorabilia_bitney_spears, R.drawable.memorabilia_tim_skold,
-            R.drawable.memorabilia_billyduffy,R.drawable.memorabilia_billyduffy
+            R.drawable.tomhamiltongood, R.drawable.tompettygood,
+            R.drawable.johnmellencampgood,R.drawable.davidruffingood,
+            R.drawable.franksinatragood, R.drawable.sergiovallingood,
+            R.drawable.tinaturnergood,R.drawable.alicecoopergood,
+            R.drawable.tonnyiomigood, R.drawable.jamesbrowngood,
+            R.drawable.justintimberlakegood,R.drawable.davedaviesgood,
+            R.drawable.clerenceclemonsgood, R.drawable.therollingstonesgood,
+            R.drawable.shakiragood,R.drawable.billyjoelgood
     };
 
 
