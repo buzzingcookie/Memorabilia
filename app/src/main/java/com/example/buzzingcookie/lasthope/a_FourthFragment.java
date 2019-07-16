@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-public class a_FirstFragment extends Fragment {
+public class a_FourthFragment extends Fragment {
 
     private TextView feelTheVibe;
     private ImageButton logoButton;
@@ -28,32 +28,17 @@ public class a_FirstFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.a_first_frag, container, false);
+        View v = inflater.inflate(R.layout.a_fourth_frag, container, false);
 
-        final Intent b_zones = new Intent(getActivity(), b_Zones.class);
-        ImageButton logoButton = (ImageButton) v.findViewById(R.id.logo_button);
-        mMemoTour = (TextView) v.findViewById(R.id.memo_tour);
-
-        YoYo.with(Techniques.FadeIn)
-                .duration(2500)
-                .repeat(0)
-                .playOn(logoButton);
-
-        logoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         return v;
     }
 
 
 
-    public static a_FirstFragment newInstance(String text) {
+    public static a_FourthFragment newInstance(String text) {
 
-        a_FirstFragment f = new a_FirstFragment();
+        a_FourthFragment f = new a_FourthFragment();
         Bundle b = new Bundle();
         b.putString("msg", text);
 

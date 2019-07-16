@@ -247,7 +247,7 @@ public class a_aSplashScreen extends AppCompatActivity {
 
     public void addDotsIndicator(int position) {
 
-        mDots = new TextView[3];
+        mDots = new TextView[4];
         mDotLayout.removeAllViews();
 
         for(int i=0; i < mDots.length; i++) {
@@ -311,14 +311,15 @@ public class a_aSplashScreen extends AppCompatActivity {
             switch(pos) {
 
                 case 0: return a_FirstFragment.newInstance("a_FirstFragment, Instance 1");
-                case 1: return a_SecondFragment.newInstance("a_SecondFragment, Instance 1");
-                default: return a_ThirdFragment.newInstance("a_ThirdFragment, Default");
+                case 1: return a_ThirdFragment.newInstance("a_ThirdFragment, Instance 1");
+                case 2: return a_FourthFragment.newInstance("a_FourthFragment, Instance 1");
+                default: return a_SecondFragment.newInstance("a_SecondFragment, Default");
             }
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
     }
 }

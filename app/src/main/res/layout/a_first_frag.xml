@@ -6,15 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvFragFirst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="26dp"
-        android:text="1st Fragment"
-        android:visibility="invisible"/>
 
     <ImageButton
         android:id="@+id/logo_button"
@@ -27,25 +18,25 @@
         android:background="@drawable/whitelogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459" />
+        app:layout_constraintVertical_bias="0.557" />
 
     <TextView
         android:id="@+id/memo_tour"
-        android:layout_width="703dp"
-        android:layout_height="188dp"
+        android:layout_width="527dp"
+        android:layout_height="299dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="704dp"
+        android:layout_marginTop="592dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/hard_rock_font"
         android:text="Memorabilia Tour"
-        android:textColor="@color/colorAccent"
         android:textAlignment="center"
         android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
         android:textSize="105dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
