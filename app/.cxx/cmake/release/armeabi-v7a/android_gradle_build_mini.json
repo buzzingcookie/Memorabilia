@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/kristofsz./Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-armeabi-v7a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/kristofsz./Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/armeabi-v7a --target native-lib",
+      "abi": "armeabi-v7a",
+      "output": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so"
+    }
+  }
+}

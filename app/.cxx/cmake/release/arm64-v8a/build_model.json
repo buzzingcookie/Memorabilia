@@ -1,0 +1,72 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia",
+      "sdkFolder": "/Users/kristofsz./Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/build/intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app",
+      "makeFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/.cxx",
+      "cxxFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx",
+      "ndkFolder": "/Users/kristofsz./Library/Android/sdk/ndk-bundle",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      ""
+    ],
+    "variantName": "release",
+    "soFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/build/intermediates/cmake/release/lib",
+    "objFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/build/intermediates/cmake/release/obj",
+    "jsonFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release",
+    "gradleBuildOutputFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a",
+  "jsonFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a",
+  "objFolder": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/build/intermediates/cmake/release/obj/arm64-v8a",
+  "buildCommandFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a/build_command.txt",
+  "buildOutputFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a/build_output.txt",
+  "modelOutputFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/CMakeLists.txt",
+    "toolchainWrapperFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/build_generation_state.json",
+    "cacheKeyFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/compiler_cache_key.json",
+    "compilerCacheUseFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cxx/release/arm64-v8a/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/release/arm64-v8a/compile_commands.json"
+}

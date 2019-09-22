@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/kristofsz./Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/debug/x86 --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/kristofsz./Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/.cxx/cmake/debug/x86 --target native-lib",
+      "abi": "x86",
+      "output": "/Users/kristofsz./Desktop/AndroidStudio/Memorabilia/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so"
+    }
+  }
+}

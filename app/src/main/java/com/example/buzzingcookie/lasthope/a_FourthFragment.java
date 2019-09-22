@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
 
 public class a_FourthFragment extends Fragment {
 
@@ -30,6 +31,11 @@ public class a_FourthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.a_fourth_frag, container, false);
 
+        HorizontalInfiniteCycleViewPager pager = (HorizontalInfiniteCycleViewPager)v.findViewById(R.id.horizontal_cycle);
+
+        MySlickAdapter adapter = new MySlickAdapter(getActivity());
+        pager.setAdapter(adapter);
+        pager.getRealItem();
 
         return v;
     }
